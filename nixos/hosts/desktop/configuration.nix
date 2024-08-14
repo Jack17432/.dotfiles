@@ -77,6 +77,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     neovim 
+    gzip
+    p7zip
     vlc
     wget
     curl

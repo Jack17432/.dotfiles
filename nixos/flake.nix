@@ -33,6 +33,7 @@
 	    ./modules/jetbrains.nix
 	    ./modules/lang.nix
 	    ./modules/virt.nix
+	    ./modules/minecraft.nix
           ];
         };
       };
