@@ -34,6 +34,7 @@
 	    ./modules/lang.nix
 	    ./modules/virt.nix
 	    ./modules/minecraft.nix
+        ./modules/nvim.nix
           ];
         };
       };

@@ -6,5 +6,7 @@
     rustup
     sqlite
     dotnet-sdk_8
+
+    vscode
   ];
 }
