@@ -14,6 +14,8 @@
     swww
     networkmanagerapplet
     home-manager
+    pavucontrol
+    blueman
   ];
 
   environment.sessionVariables = {
