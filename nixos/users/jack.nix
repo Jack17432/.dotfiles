@@ -12,7 +12,8 @@
     ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/hyprland;
     ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/waybar;
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/nvim;
-    ".bashrc".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/.bashrc;
+    ".bashrc".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/term/.bashrc;
+    ".zshrc".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/term/.zshrc;
   };
 
   home.sessionVariables = {};

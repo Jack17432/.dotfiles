@@ -27,14 +27,16 @@
 	  specialArgs = { inherit inputs system pkgs; };
           modules = [
             ./hosts/desktop/configuration.nix
-	    ./home.nix
-	    ./modules/hyprland.nix
-	    ./modules/nvidia.nix
-	    ./modules/jetbrains.nix
-	    ./modules/lang.nix
-	    ./modules/virt.nix
-	    ./modules/minecraft.nix
-        ./modules/nvim.nix
+	        ./home.nix
+
+	        ./modules/hyprland.nix
+	        ./modules/nvidia.nix
+	        ./modules/jetbrains.nix
+	        ./modules/lang.nix
+	        ./modules/virt.nix
+	        ./modules/minecraft.nix
+            ./modules/nvim.nix
+            ./modules/term.nix
           ];
         };
       };
