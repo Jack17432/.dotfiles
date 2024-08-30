@@ -12,8 +12,4 @@ compinit
 # End of lines added by compinstall
 
 # alias's
-alias .='cd ~/.dotfiles'
-alias 'shell-ros2'='~/.dotfiles/scripts/nixshell-ros2.sh'
-
-alias 'switch#desktop'='sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#desktop'
-
+source ~/.dotfiles/term/alias
