@@ -13,3 +13,6 @@ compinit
 
 # alias's
 source ~/.dotfiles/term/alias
+
+# fuckity fuck
+eval $(thefuck --alias)
