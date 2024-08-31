@@ -11,8 +11,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# alias's
 source ~/.dotfiles/term/alias
+source ~/.dotfiles/term/envs
 
 # fuckity fuck
 eval $(thefuck --alias)
