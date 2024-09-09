@@ -1,0 +1,14 @@
+configuration {
+    combi-modes: [drun, ssh, window, run];
+    
+    timeout {
+        action: "kb-cancel";
+        delay:  0;
+    }
+    filebrowser {
+        directories-first: true;
+        sorting-method:    "name";
+    }
+}
+
+@theme "theme.rasi"

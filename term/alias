@@ -1,4 +1,5 @@
 alias 'shell-ros2'='~/.dotfiles/scripts/nixshell-ros2.sh'
+alias 'shell-platformio'='nix-shell ~/.dotfiles/nixos/shells/platformio.nix'
 
 alias .='cd ~/.dotfiles'
 alias 's#desktop'='sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#desktop'

@@ -97,7 +97,7 @@
       // "format-alt": "{alt}",
     },
     "custom/test": {
-      "exec": "~/.config/waybar/scripts/wethery | cut -d \"|\" -f 2",
+      "exec": "~/.config/waybar/scripts/counter",
       "return-type": "json"
     }
   }

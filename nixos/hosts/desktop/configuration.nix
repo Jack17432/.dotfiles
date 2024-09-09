@@ -87,14 +87,10 @@
     kitty
     git
     obsidian
-    xfce.thunar
-    xfce.thunar-volman
-    xfce.thunar-archive-plugin
     google-chrome
     firefox
     discord
     unzip
-    kdePackages.dolphin
   ];
 
   fonts.packages = with pkgs; [
