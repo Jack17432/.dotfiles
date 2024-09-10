@@ -93,6 +93,11 @@
     unzip
   ];
 
+  # Optional service configuration if needed
+  services.dbus = {
+    enable = true;
+  };
+
   fonts.packages = with pkgs; [
     nerdfonts
   ];
