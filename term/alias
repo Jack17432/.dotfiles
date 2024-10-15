@@ -5,3 +5,4 @@ alias .='cd ~/.dotfiles'
 alias 's#desktop'='sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#desktop'
 
 alias 'rm'='rm -i'
+alias 'dkill'='sudo docker kill $(sudo docker ps -q)'

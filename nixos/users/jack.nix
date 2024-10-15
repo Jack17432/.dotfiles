@@ -12,9 +12,10 @@
         ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/hyprland;
         ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/waybar;
         ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/nvim;
+        ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/rofi;
+        ".config/dunst".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/dunst;
         ".bashrc".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/term/.bashrc;
         ".zshrc".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/term/.zshrc;
-        ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/rofi;
     };
 
     home.sessionVariables = {};

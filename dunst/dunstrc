@@ -1,0 +1,4 @@
+[global]
+    follow = keyboard
+    origin = top-center
+
