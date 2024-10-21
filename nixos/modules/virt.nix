@@ -21,6 +21,9 @@
     win-virtio
     win-spice
     swtpm
+    
+    winetricks
+    wineWowPackages.stable
   ];
 
   programs.virt-manager.enable = true;

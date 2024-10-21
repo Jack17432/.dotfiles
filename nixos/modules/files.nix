@@ -12,4 +12,9 @@
             thunar-volman
         ];
     };
+
+    environment.systemPackages = with pkgs; [
+        zip
+        bzip2
+    ];
 }

@@ -12,8 +12,18 @@
 
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.loader = {
+        #systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+    grub = {
+      enable = true;
+      devices = [ "nodev" ];
+      efiSupport = true;
+      useOSProber = true;
+    };
+  };
+
   boot.supportedFilesystems = [ "ntfs" "exfat" "ext4" ];
 
   networking.hostName = "deskchris"; # Define your hostname.

@@ -15,10 +15,12 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
-	config = {
-	  allowUnfree = true;
+        config = {
+          allowUnfree = true;
           cudaSupport = true;
-	};
+          
+          extraOutputsToInstall = [ "dev" ];
+        };
       };
       
     in {
@@ -40,6 +42,7 @@
             ./modules/work.nix
             ./modules/embedded.nix
             ./modules/files.nix
+            ./modules/cpp.nix
           ];
         };
       };
