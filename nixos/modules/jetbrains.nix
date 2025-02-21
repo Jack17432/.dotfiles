@@ -5,5 +5,6 @@
     jetbrains-toolbox
     jetbrains.clion
     jetbrains.pycharm-professional    
+    jetbrains.rust-rover
   ];
 }
