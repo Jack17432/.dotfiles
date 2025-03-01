@@ -13,8 +13,13 @@
 
     environment.systemPackages = with pkgs; [
         lutris
+        mangohud
+        protonup-qt
+        bottles
+        heroic
 
-        steam
         prismlauncher
     ];
+
+    programs.steam.enable = true;
 }

@@ -61,12 +61,20 @@
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
+    package = pkgs.bluez;
     settings = {
+      General = {
+        Enable = "Source,Sink,Media,Socket";
+        AutoEnable = true;
+        ControllerMode = "bredr";
+      };
       Policy = {
         AutoEnable = "true";
       };
     };
   };
+  services.blueman.enable = true;
+
   hardware.enableAllFirmware = true;
 
   security.rtkit.enable = true;

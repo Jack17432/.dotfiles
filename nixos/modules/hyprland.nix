@@ -15,7 +15,6 @@
     networkmanagerapplet
     home-manager
     pavucontrol
-    blueman
   ];
 
   programs.tmux.enable = true;

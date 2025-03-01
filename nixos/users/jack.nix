@@ -16,7 +16,7 @@
         ".config/dunst".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/dunst;
         ".bashrc".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/term/.bashrc;
         ".zshrc".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/term/.zshrc;
-        ".ideavimrc".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/term/.zshrc;
+        ".ideavimrc".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/nvim/.ideavimrc;
     };
 
     home.sessionVariables = { 
