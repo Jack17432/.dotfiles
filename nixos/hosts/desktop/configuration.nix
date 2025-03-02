@@ -13,14 +13,23 @@
 
   # Bootloader.
 
-  boot.loader = {
-        #systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-    grub = {
-      enable = true;
-      devices = [ "nodev" ];
-      efiSupport = true;
-      useOSProber = true;
+  boot = {
+    initrd = {
+        enable = true;
+        systemd.enable = true;
+    };
+
+    plymouth = {
+        enable = true;
+        font = "${pkgs.jetbrains-mono}/share/fonts/truetype/JetBrainsMono-Regular.ttf";
+        themePackages = [ pkgs.catppuccin-plymouth ];
+        theme = "catppuccin-macchiato";
+    };
+
+    loader = {
+        systemd-boot.enable = true;
+        efi.canTouchEfiVariables = true;
+        timeout = 2;
     };
   };
 
@@ -61,19 +70,17 @@
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
-    package = pkgs.bluez;
+        #package = pkgs.bluez;
     settings = {
-      General = {
-        Enable = "Source,Sink,Media,Socket";
-        AutoEnable = true;
-        ControllerMode = "bredr";
-      };
+            #General = {
+            #AutoEnable = true;
+            #ControllerMode = "bredr";
+            #};
       Policy = {
         AutoEnable = "true";
       };
     };
   };
-  services.blueman.enable = true;
 
   hardware.enableAllFirmware = true;
 
@@ -109,6 +116,7 @@
     firefox
     discord
     unzip
+    overskride
   ];
 
   # Optional service configuration if needed

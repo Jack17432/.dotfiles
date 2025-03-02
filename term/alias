@@ -7,3 +7,5 @@ alias 'update'='sudo nix-channel --update;'
 
 alias 'rm'='rm -i'
 alias 'dkill'='sudo docker kill $(sudo docker ps -q)'
+
+alias 'iderust'='nohup rust-rover . >&/dev/null & disown && exit'
