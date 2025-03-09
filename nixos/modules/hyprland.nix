@@ -1,6 +1,16 @@
 { config, pkgs, environment, ... }:
 
 { 
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --time-format '%I:%M %p | %a • %h | %F' --cmd Hyprland";
+        user = "jack";
+      };
+    };
+  };
+
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -15,6 +25,8 @@
     networkmanagerapplet
     home-manager
     pavucontrol
+    greetd.tuigreet
+    hyprlock
   ];
 
   programs.tmux.enable = true;

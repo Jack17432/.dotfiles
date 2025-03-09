@@ -81,6 +81,7 @@
       };
     };
   };
+  services.blueman.enable = true;
 
   hardware.enableAllFirmware = true;
 
