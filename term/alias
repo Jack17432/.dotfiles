@@ -3,7 +3,7 @@ alias 'shell-platformio'='nix-shell ~/.dotfiles/nixos/shells/platformio.nix'
 
 alias .='cd ~/.dotfiles'
 alias 's#desktop'='sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#desktop'
-alias 'update'='sudo nix-channel --update;'
+alias 'update'='sudo nix-channel --update'
 
 alias .j='just --global-justfile '
 

@@ -1,5 +1,5 @@
 {
-    description = "bevy flake, This flake has all the things needed to run bevy with wayland and uses rust configed from rust-toolchain.toml";
+    description = "Has rust that uses the rust-toolchain files and call build configs to run bevy with wayland";
 
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";

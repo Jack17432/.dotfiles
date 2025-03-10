@@ -1,2 +1,8 @@
-hello:
-    echo "Hello World!"
+default:
+    @just -g --list
+
+clean-sys:
+    sudo nix-collect-garbage
+    sudo nix-collect-garbage -d
+    sudo nix profile wipe-history --older-than 7d
+

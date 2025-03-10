@@ -25,6 +25,7 @@
     users.defaultUserShell = pkgs.zsh;
 
     environment.systemPackages = with pkgs; [
+        libqalculate
         thefuck
         just
     ];
