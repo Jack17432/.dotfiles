@@ -13,6 +13,7 @@ compinit
 
 source ~/.dotfiles/term/alias
 source ~/.dotfiles/term/envs
+source ~/.dotfiles/term/just.zsh
 
 # fuckity fuck
 eval $(thefuck --alias)

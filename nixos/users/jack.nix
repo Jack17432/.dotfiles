@@ -14,6 +14,7 @@
         ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/nvim;
         ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/rofi;
         ".config/dunst".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/dunst;
+        ".config/just/justfile".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/term/justfile;
         ".bashrc".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/term/.bashrc;
         ".zshrc".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/term/.zshrc;
         ".ideavimrc".source = config.lib.file.mkOutOfStoreSymlink /home/jack/.dotfiles/nvim/.ideavimrc;

@@ -7,7 +7,10 @@ return {
         config.setup({
             ensure_installed = { "vim", "lua", "bash" },
             auto_install = true,
-            highlight = { enabled = true },
+            highlight = { 
+                enabled = true,
+                disable = { "just" },
+            },
             indent = { enable = true }, 
         })
     end 
