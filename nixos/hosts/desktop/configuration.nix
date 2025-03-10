@@ -126,14 +126,13 @@
   };
 
   fonts.packages = with pkgs; [
-    nerdfonts
-  ];
+  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
-  fonts.fontconfig = {
-    defaultFonts = {
-      monospace = [ "JetBrainsMono Nerd Font" ];
+    fonts.fontconfig = {
+        defaultFonts = {
+            monospace = [ "JetBrainsMono Nerd Font" ];
+        };
     };
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -161,5 +160,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }
