@@ -2,7 +2,10 @@ alias 'shell-ros2'='~/.dotfiles/scripts/nixshell-ros2.sh'
 alias 'shell-platformio'='nix-shell ~/.dotfiles/nixos/shells/platformio.nix'
 
 alias .='cd ~/.dotfiles'
+
 alias 's#desktop'='sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#desktop'
+alias 'boot#desktop'='sudo nixos-rebuild boot --flake ~/.dotfiles/nixos#desktop'
+
 alias 'update'='sudo nix-channel --update'
 
 alias .j='just --global-justfile '

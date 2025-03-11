@@ -22,24 +22,21 @@
       };
       
     in {
-            devShells.x86_64-linux.default = (import ./dev-shells/furrow-detection.nix { inherit pkgs; });
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs system pkgs; };
+          specialArgs = { inherit inputs; };
               modules = [
                 ./hosts/desktop/configuration.nix
                 ./home.nix
 
+                ./modules/bootloader.nix
                 ./modules/hyprland.nix
                 ./modules/nvidia.nix
                 ./modules/jetbrains.nix
-                ./modules/lang.nix
                 ./modules/virt.nix
                 ./modules/games.nix
                 ./modules/nvim.nix
                 ./modules/term.nix
-                ./modules/work.nix
-                ./modules/embedded.nix
                 ./modules/files.nix
               ];
             };

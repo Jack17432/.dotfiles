@@ -15,6 +15,7 @@
             };
             autosuggestions.enable = true;
         };
+
         direnv = {
             enable = true;
             enableBashIntegration = true; # see note on other shells below
@@ -25,6 +26,7 @@
     users.defaultUserShell = pkgs.zsh;
 
     environment.systemPackages = with pkgs; [
+        kitty
         libqalculate
         thefuck
         just

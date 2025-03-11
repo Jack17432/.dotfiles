@@ -1,8 +1,19 @@
+alias gc := clean-sys
+
 default:
     @just -g --list
 
+# Cleans nix packages and old profiles
 clean-sys:
     sudo nix-collect-garbage
     sudo nix-collect-garbage -d
     sudo nix profile wipe-history --older-than 7d
 
+# Rebuilds nixos system for the given target
+switch target:
+    sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#{{target}}
+
+# Rebuilds and builds the boot system for target
+boot target:
+    sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#{{target}}
+    sudo nixos-rebuild boot --flake ~/.dotfiles/nixos#{{target}}

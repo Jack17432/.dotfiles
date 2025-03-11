@@ -10,31 +10,6 @@
       ./hardware-configuration.nix
     ];
 
-
-  # Bootloader.
-
-  boot = {
-    initrd = {
-        enable = true;
-        systemd.enable = true;
-    };
-
-    plymouth = {
-        enable = true;
-        font = "${pkgs.jetbrains-mono}/share/fonts/truetype/JetBrainsMono-Regular.ttf";
-        themePackages = [ pkgs.catppuccin-plymouth ];
-        theme = "catppuccin-macchiato";
-    };
-
-    loader = {
-        systemd-boot.enable = true;
-        efi.canTouchEfiVariables = true;
-        timeout = 2;
-    };
-  };
-
-  boot.supportedFilesystems = [ "ntfs" "exfat" "ext4" ];
-
   networking.hostName = "deskchris"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -102,7 +77,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim 
     bind
     ventoy-full
     gzip
@@ -110,7 +84,6 @@
     vlc
     wget
     curl
-    kitty
     git
     obsidian
     google-chrome
