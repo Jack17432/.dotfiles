@@ -5,7 +5,7 @@ XDG_CONFIG_HOME=$HOME/.config
 #      Hyprland Support apps         #
 ######################################
 swww init &
-swww /home/jack/.dotfiles/hyprland/wallpapers/BackgroundAsteroidBlue.jpg
+swww img /home/jack/.dotfiles/hyprland/wallpapers/BackgroundAsteroidBlue.jpg
 nm-applet --indicator &
 waybar &
 dunst
