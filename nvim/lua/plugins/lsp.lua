@@ -1,36 +1,37 @@
-local servers = {
-    lua_ls = {
-        settings = {
-            Lua = {
-                diagnostics = {
-                    globals = { 'vim' },
-                },
-                completion = {
-                    callSnippet = 'Replace',
-                },
-            },
-        },
-    },
-}
-
 return {
-    'neovim/nvim-lspconfig',
-    dependencies = {
-        'williamboman/mason.nvim',
-        'williamboman/mason-lspconfig.nvim',
-    },
+	{
+		"neovim/nvim-lspconfig",
+		dependencies = {
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+			"j-hui/fidget.nvim",
+			"saghen/blink.cmp",
+		},
+		config = function()
+            local blink = require('blink.cmp')
+			local capabilities = vim.tbl_deep_extend(
+				"force",
+				{},
+				vim.lsp.protocol.make_client_capabilities(),
+				blink.get_lsp_capabilities({}, false)
+			)
 
-    config = function()
-        require('mason').setup()
-
-        require('mason-lspconfig').setup({
-            handlers = {
-                function(server_name)
-                    local server = servers[server_name] or {}
-                    server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-                    require('lspconfig')[server_name].setup(server)
-                end,
-            },
-        })
-    end
+			require("fidget").setup({})
+			require("mason").setup()
+			require("mason-lspconfig").setup({
+				ensure_installed = {
+					"lua_ls",
+					"rust_analyzer",
+					"tailwindcss",
+				},
+				handlers = {
+					function(server_name) -- default handler (optional)
+						require("lspconfig")[server_name].setup({
+							capabilities = capabilities,
+						})
+					end,
+				},
+			})
+		end,
+	},
 }
